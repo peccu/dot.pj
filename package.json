@@ -1,0 +1,26 @@
+{
+  "name": "dot.pj",
+  "version": "0.0.1",
+  "description": "manage dot files for each projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peccu/dot.pj.git"
+  },
+  "author": "peccu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peccu/dot.pj/issues"
+  },
+  "homepage": "https://github.com/peccu/dot.pj#readme",
+  "preferGlobal": true,
+  "bin": {
+    "dot.pj": "index.js"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}

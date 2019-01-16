@@ -1,4 +1,4 @@
-export default class Sample {
+export default class Sample{
   constructor(val){
     // eslint-disable-next-line no-console
     console.log('constructed');

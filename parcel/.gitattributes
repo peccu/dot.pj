@@ -1,0 +1,3 @@
+*.scpt diff=applescript
+*.rtf diff=rtf
+

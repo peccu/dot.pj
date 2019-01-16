@@ -1,0 +1,45 @@
+{
+  "name": "APP_NAME",
+  "version": "1.0.0",
+  "description": "parcel-template",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "npm run cors & parcel index.html",
+    "build": "git stash save && rm dist/* && parcel build --public-url '.' index.html && git stash pop",
+    "cors": "cors-proxy start -p 9899",
+    "coverageReport": "jest --coverage ; npm run coveralls ; npm run codacy-coverage ; npm run codecov",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage",
+    "codecov": "codecov",
+    "lint": "eslint ./src",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peccu/APP_NAME.git"
+  },
+  "author": "peccu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/peccu/APP_NAME/issues"
+  },
+  "homepage": "https://github.com/peccu/APP_NAME#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.3",
+    "@isomorphic-git/cors-proxy": "^2.3.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "codacy-coverage": "^3.4.0",
+    "codecov": "^3.1.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.12.0",
+    "eslint-plugin-fp": "^2.3.0",
+    "eslint-plugin-security": "^1.4.0",
+    "jest": "^23.6.0",
+    "parcel-bundler": "^1.10.3"
+  },
+  "dependencies": {}
+}

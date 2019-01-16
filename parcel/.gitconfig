@@ -1,0 +1,7 @@
+# with .gitattributes
+# *.scpt diff=applescript
+[diff "applescript"]
+  textconv = osadecompile
+# *.rtf diff=rtf
+[diff "rtf"]
+  textconv = textutil -convert txt -stdout

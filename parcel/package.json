@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "npm run cors & parcel index.html",
+    "dev": "parcel index.html",
     "build": "git stash save && rm dist/* && parcel build --public-url '.' index.html && git stash pop",
-    "cors": "cors-proxy start -p 9899",
     "coverageReport": "jest --coverage ; npm run coveralls ; npm run codacy-coverage ; npm run codecov",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "codacy-coverage": "cat ./coverage/lcov.info | codacy-coverage",
@@ -29,7 +28,6 @@
     "@babel/core": "^7.2.2",
     "@babel/plugin-transform-runtime": "^7.2.0",
     "@babel/preset-env": "^7.2.3",
-    "@isomorphic-git/cors-proxy": "^2.3.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "codacy-coverage": "^3.4.0",

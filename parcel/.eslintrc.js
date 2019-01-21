@@ -51,7 +51,7 @@ module.exports = {
     "consistent-this": "error",
     "curly": "error",
     "default-case": "error",
-    "dot-location": "error",
+    "dot-location": ["error", "property"],
     "dot-notation": [
       "error",
       {
@@ -91,7 +91,17 @@ module.exports = {
       "error",
       {
         "after": false,
-        "before": false
+        "before": false,
+        "overrides": {
+          "from": {
+            "after": true,
+            "before": true
+          },
+          "import": {
+            "after": true,
+            "before": true
+          }
+        }
       }],
     "line-comment-position": "error",
     "linebreak-style": [
@@ -125,7 +135,7 @@ module.exports = {
     "max-params": "error",
     "max-statements": "error",
     "max-statements-per-line": "error",
-    "multiline-comment-style": ["error", "starred-block"],
+    "multiline-comment-style": ["error", "separate-lines"],
     "multiline-ternary": "error",
     "new-cap": "error",
     "new-parens": "error",

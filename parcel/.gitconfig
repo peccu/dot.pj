@@ -5,3 +5,7 @@
 # *.rtf diff=rtf
 [diff "rtf"]
   textconv = textutil -convert txt -stdout
+# *.xlsx diff=xlsx
+[diff "xlsx"]
+    binary = true
+    textconv = $GOPATH/bin/git-xlsx-textconv
